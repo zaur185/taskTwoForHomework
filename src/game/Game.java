@@ -1,9 +1,9 @@
 package game;
 
 import player.Player;
+import table.Table;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -52,11 +52,11 @@ public class Game {
 
             boolean checkWins=false;
 
-            if(checkTablePLayer1()){
+            if(table.checkTablePLayer1()){
                 player1.setWins(true);
                 checkWins=true;
                 System.out.println("выграл"+player1.getName());
-            }else if (checkTablePLayer2()){
+            }else if (table.checkTablePLayer2()){
                 player2.setWins(true);
                 checkWins=true;
                 System.out.println("выграл"+player2.getName());
@@ -82,79 +82,7 @@ public class Game {
 
 
 
-    public boolean checkTablePLayer1() {
-        if (table.getTable(0, 0) == 'X' &
-                table.getTable(0, 1) == 'X' &
-                table.getTable(0, 2) == 'X') {
-            return true;
-        }else if (table.getTable(1, 0) == 'X' &
-                table.getTable(1, 1) == 'X' &
-                table.getTable(1, 2) == 'X') {
-            return true;
-        }else if (table.getTable(2, 0) == 'X' &
-                table.getTable(2, 1) == 'X' &
-                table.getTable(2, 2) == 'X') {
-            return true;
-        }else if (table.getTable(0, 0) == 'X' &
-                table.getTable(1, 0) == 'X' &
-                table.getTable(2, 0) == 'X') {
-            return true;
-        }if (table.getTable(0, 1) == 'X' &
-                table.getTable(1, 1) == 'X' &
-                table.getTable(2, 1) == 'X') {
-            return true;
-        }if (table.getTable(0, 2) == 'X' &
-                table.getTable(1, 2) == 'X' &
-                table.getTable(2, 2) == 'X') {
-            return true;
-        }if (table.getTable(0, 0) == 'X' &
-                table.getTable(1, 1) == 'X' &
-                table.getTable(2, 2) == 'X') {
-            return true;
-        }if (table.getTable(0, 2) == 'X' &
-                table.getTable(1, 1) == 'X' &
-                table.getTable(2, 0) == 'X') {
-            return true;
-        }
-        return false;
-    }
 
-    public boolean checkTablePLayer2() {
-        if (table.getTable(0, 0) == '0' &
-                table.getTable(0, 1) == '0' &
-                table.getTable(0, 2) == '0') {
-            return true;
-        }else if (table.getTable(1, 0) == '0' &
-                table.getTable(1, 1) == '0' &
-                table.getTable(1, 2) == '0') {
-            return true;
-        }else if (table.getTable(2, 0) == '0' &
-                table.getTable(2, 1) == '0' &
-                table.getTable(2, 2) == '0') {
-            return true;
-        }else if (table.getTable(0, 0) == '0' &
-                table.getTable(1, 0) == '0' &
-                table.getTable(2, 0) == '0') {
-            return true;
-        }if (table.getTable(0, 1) == '0' &
-                table.getTable(1, 1) == '0' &
-                table.getTable(2, 1) == '0') {
-            return true;
-        }if (table.getTable(0, 2) == '0' &
-                table.getTable(1, 2) == '0' &
-                table.getTable(2, 2) == '0') {
-            return true;
-        }if (table.getTable(0, 0) == '0' &
-                table.getTable(1, 1) == '0' &
-                table.getTable(2, 2) == '0') {
-            return true;
-        }if (table.getTable(0, 2) == '0' &
-                table.getTable(1, 1) == '0' &
-                table.getTable(2, 0) == '0') {
-            return true;
-        }
-        return false;
-    }
 
 
 
