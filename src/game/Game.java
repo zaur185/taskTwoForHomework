@@ -44,10 +44,10 @@ public class Game {
 
             if (i % 2 != 0) {
                 table.setTable(iTable, jTable, 'X');
-                outputTable();
+                table.outputTable();
             } else if (i % 2 == 0) {
                 table.setTable(iTable, jTable, '0');
-                outputTable();
+                table.outputTable();
             }
 
             boolean checkWins=false;
@@ -68,7 +68,7 @@ public class Game {
                 System.out.println("0-нет");
                 int value = in.nextInt();
                 if(value==0){
-                 writeReport();
+
                  break;
                 }else if(value==1){
                     gameStarted();
@@ -80,18 +80,7 @@ public class Game {
 
     }
 
-    private void outputTable() {
-        for (int indexI = 0; indexI < 3; indexI++) {
 
-            for (int indexJ = 0; indexJ < 3; indexJ++) {
-                System.out.print("|");
-                System.out.print(table.getTable(indexI, indexJ)); //System.out.print("-");
-            }
-
-            System.out.print("|");
-            System.out.println();
-        }
-    }
 
     public boolean checkTablePLayer1() {
         if (table.getTable(0, 0) == 'X' &
@@ -167,20 +156,7 @@ public class Game {
         return false;
     }
 
-    public void writeReport(){
-        try {
-            FileWriter fw = new FileWriter(reportFile,true);
 
-            fw.write(player1.getName()+" кол-во побед "+player1.getWins()+"||");
-            fw.write(player2.getName()+" кол-во побед "+player2.getWins());
-            fw.write("\n");
-
-            fw.flush();
-            fw.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
 
 }
