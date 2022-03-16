@@ -33,7 +33,7 @@ public class WriterHistory{
                 for(int i = 0; i <gameplay.getStepArrayList().size();i++){
 
                     rootElement.appendChild(getStep(doc,
-                            gameplay.getStepArrayList().get(i).getIdStep(),
+
                             gameplay.getStepArrayList().get(i).getIndexI(),
                             gameplay.getStepArrayList().get(i).getIndexJ(),
                             gameplay.getStepArrayList().get(i).getPlayerID()));
@@ -64,11 +64,10 @@ public class WriterHistory{
         }
 
 
-        private static Node getStep(Document doc, String id, String indexI, String indexJ, String playerId) {
+        private static Node getStep(Document doc, String indexI, String indexJ, String playerId) {
             Element language = doc.createElement("Step");
 
             // устанавливаем атрибут id
-            language.setAttribute("id", id);
 
             // создаем элемент indexI
             language.appendChild(getLanguageElements(doc, language, "indexI", indexI));

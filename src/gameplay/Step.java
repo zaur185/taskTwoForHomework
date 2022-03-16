@@ -1,22 +1,18 @@
 package gameplay;
 
 public class Step {
-    private int idStep;
     private int indexI;
     private int indexJ;
     private int playerID;
 
 
-    public Step(int idStep, int indexI, int indexJ,int playerID){
-        this.idStep = idStep;
+    public Step( int indexI, int indexJ,int playerID){
         this.indexI = indexI;
         this.indexJ = indexJ;
         this.playerID = playerID;
     }
 
-    public void setIdStep(int idStep) {
-        this.idStep = idStep;
-    }
+
 
     public void setIndexI(int indexI) {
         this.indexI = indexI;
@@ -33,9 +29,7 @@ public class Step {
 
 
 
-    public String getIdStep() {
-        return Integer.toString(idStep);
-    }
+
 
     public String getIndexI() {
         return Integer.toString(indexI);

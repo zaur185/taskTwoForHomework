@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GamePlay>
+    <person>
+        <Step>
+            <indexI>0</indexI>
+            <indexJ>1</indexJ>
+            <playerID>1</playerID>
+        </Step>
+        <Step>
+            <indexI>1</indexI>
+            <indexJ>1</indexJ>
+            <playerID>2</playerID>
+        </Step>
+        <Step>
+            <indexI>0</indexI>
+            <indexJ>1</indexJ>
+            <playerID>1</playerID>
+        </Step>
+        <Step>
+            <indexI>0</indexI>
+            <indexJ>0</indexJ>
+            <playerID>2</playerID>
+        </Step>
+        <Step>
+            <indexI>1</indexI>
+            <indexJ>0</indexJ>
+            <playerID>1</playerID>
+        </Step>
+        <Step>
+            <indexI>2</indexI>
+            <indexJ>2</indexJ>
+            <playerID>2</playerID>
+        </Step>
+    </person>
+</GamePlay>

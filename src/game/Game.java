@@ -39,8 +39,8 @@ public class Game {
                 iTable = in.nextInt();
                 System.out.println("значение по горизонтали ");
                 jTable = in.nextInt();
-                if (i % 2 != 0) gameplay.addStep(i, iTable, jTable, 1);
-                else if (i % 2 == 0) gameplay.addStep(i, iTable, jTable, 2);
+                if (i % 2 != 0) gameplay.addStep( iTable, jTable, 1);
+                else if (i % 2 == 0) gameplay.addStep(iTable, jTable, 2);
 
                 if (iTable >= 3 || jTable >= 3) {
                     System.out.println("значения выходят за рамки поля,введите еще раз");
