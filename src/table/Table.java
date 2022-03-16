@@ -28,8 +28,9 @@ public class Table {
     private void outputTable(Gameplay gameplay) {
 
         for(int index = 0; index < gameplay.getStepArrayList().size(); index++) {
-            int i= gameplay.getStepArrayList().get(index).getIndexI();
-            int j = gameplay.getStepArrayList().get(index).getIndexJ();
+
+            int i=Integer.parseInt(gameplay.getStepArrayList().get(index).getIndexI()) ;
+            int j = Integer.parseInt(gameplay.getStepArrayList().get(index).getIndexJ());
 
             for (int indexI = 0; indexI < 3; indexI++) {
 
